@@ -2,12 +2,20 @@
 <html lang="pt-br">
 
 <head>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonte do Google - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="André Nunes">
 
-    <meta name="description" content="Portfólio Pessoal da André Nunes, 
+    <meta name="description" content="Portfólio Pessoal do André Nunes, 
                     desenvolvedor BackEnd JR especializado em criar soluções 
                     digitais eficientes. Conheça meus projetos e entre em contato.">
 
@@ -15,15 +23,21 @@
 
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
 
-    <title>Portfólio da André</title>
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS principal da página -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <title>Portfólio do André</title>
 </head>
 
 <body>
 
     <!--- Cabeçalho da Página -->
     <header>
-            <div class="menu-content">
-                <!-- Título do cabeçalho -->
+        <div class="menu-content">
+            <!-- Título do cabeçalho -->
             <a href="index.html" id="titulo">Portfólio</a>
 
             <!-- Menu de Navegação -->
@@ -32,7 +46,7 @@
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contatos</a></li>
+                    <li><a href="#contact">Contato</a></li>
 
                 </ul>
             </nav>
@@ -59,8 +73,7 @@
 
             <!-- Imagem da Seção Hero -->
             <figure class="hero-image">
-                <img src="./assets/img/foto_dev_man.svg" width="300" alt="Foto do autor do site"
-                    class="float-animation">
+                <img src="./assets/img/andre-portfolio.png" alt="Foto do autor do site" class="float-animation">
             </figure>
 
         </section>
@@ -68,47 +81,8 @@
         <!-- Seção Sobre Mim -->
         <section id="about" class="section-container about-container">
 
-            <!-- Imagem da Seção Sobre Mim -->
-            <figure class="about-image">
-                <img src="./assets/img/avatar_dev_man.svg" width="300" alt="Foto - Perfil do autor do site">
 
 
-                <!-- Conteúdo da Seção Sobre Mim -->
-                <article class="about-content">
-                    <h2>Sobre Mim</h2>
-                    <p>Sou um desenvolvedor backend jr apaixonado por criar soluções eficientes e escaláveis. Com
-                        habilidades em diversas tecnologias, estou sempre em busca de novos desafios e oportunidades
-                        para aprimorar minhas habilidades.</p>
-                    <p>Se você está procurando alguém para transformar suas ideias em realidade, entre em contato
-                        comigo!</p>
-
-                    <!-- Links (GitHub + Currículo) e Dados do GitHub-->
-                    <div class="about-buttons-data">
-
-                        <!-- Links-->
-                        <div class="buttons-container">
-                            <a href="https://github.com/andrelsrn" target="_blank" class="botao">GitHub</a>
-                            <a href="./Curriculo_AndreLuisSilvaRochaNunes.pdf" target="_blank"
-                                class="botao-outline">Currículo</a>
-                        </div>
-
-                        <!-- Dados do Repositório GitHub -->
-                        <div class="data-container">
-                            <!-- Número de Seguidores -->
-                            <div class="data-item">
-                                <span class="data-number">100</span>
-                                <span class="data-label">Seguidores</span>
-
-                            </div>
-                            <!-- Número de Repositórios -->
-                            <div class="data-item">
-                                <span class="data-number">10</span>
-                                <span class="data-label">Repositórios</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </figure>
         </section>
 
         <!-- Seção Projetos -->
@@ -120,50 +94,14 @@
             <div class="swiper projects-swiper">
                 <div class="swiper-wrapper">
 
-                    <figure class="swiper-slide">
-
-                        <article class="project-card">
-
-                            <!-- Ícone da Tecnologia padrão do projeto -->
-                            <figure class="project-image">
-                                <img src="./assets/icons/languages/github.svg" alt="Ícone do GitHub" width="100">
-                            </figure>
-
-                            <!-- Conteúdo do Projeto -->
-                            <div class="project-content">
-
-                                <h3>Projeto GitHub</h3>
-                                <p>Projeto desenvolvido no GitHub</p>
-
-                                <!-- Tags do Projeto -->
-                                <div class="project-tags">
-                                    <span class="tag">GitHub</span>
-                                </div>
-
-                                <!-- Links do Projeto -->
-                                <div class="project-buttons">
-                                    <a href="#" target="_blank" class="botao botao-sm">
-                                        GitHub
-                                    </a>
-                                    <a href="#" target="_blank" class="botao-outline botao-sm">
-                                        Deploy
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </article>
-
                 </div>
 
-            </div>
+                <!-- Botões de Navegação -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
 
-            <!-- Botões de Navegação -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
-            <!-- Paginação -->
-            <div class="swiper-pagination"></div>
+                <!-- Paginação -->
+                <div class="swiper-pagination"></div>
 
             </div>
 
@@ -196,10 +134,11 @@
                 </div>
             </article>
 
-            <h2>Entre em Contato</h2>
-
             <!-- Formulário de Contato -->
-            <form id="formulario">
+            <form id="formulario" action="https://formsubmit.co/64e0d5ed442a7a50af0a026faa2973d2" method="POST">
+
+                <input type="hidden" name="_next" value="https://andrelsrn.github.io/portfolio/success.html">
+                <input type="hidden" name="_captcha" value="false">
 
                 <label for="nome">Nome:</label>
                 <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo">
@@ -231,6 +170,11 @@
     <footer>
         Desenvolvido por André Nunes - 2026
     </footer>
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
 
 
 </body>
