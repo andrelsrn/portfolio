@@ -11,7 +11,10 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
 // Função para construir a seção about
 async function getAboutGithub() {
     try {
-        const resposta = await fetch('https://api.github.com/users/marypraxedes');
+        // Seleciona a seção #about no HTML caso ainda não esteja capturada
+        const about = document.querySelector('#about');
+
+        const resposta = await fetch('https://api.github.com/users/andrelsrn');
         const perfil = await resposta.json();
 
         about.innerHTML = `
@@ -24,15 +27,13 @@ async function getAboutGithub() {
             <article class="about-content">
                 <h2>Sobre Mim</h2>
 
+                <!-- Traz a bio do seu GitHub se existir ou usa o texto padrão -->
                 <p>
-                    Sou uma desenvolvedora Full Stack apaixonada por criar experiências digitais incríveis.
-                    Com habilidades em diversas tecnologias, estou sempre em busca de novos desafios e
-                    oportunidades para aprimorar minhas habilidades.
+                    ${perfil.bio || 'Sou um desenvolvedor BackEnd JR apaixonado por criar soluções digitais eficientes e arquiteturas sólidas.'}
                 </p>
 
                 <p>
-                    Se você está procurando alguém para transformar suas ideias em realidade,
-                    entre em contato comigo!
+                    Se você está procurando alguém para transformar suas ideias em realidade e trazer maturidade de negócio ao seu projeto, entre em contato comigo!
                 </p>
 
                 <!-- Links (GitHub + Currículo) e Dados do GitHub -->
@@ -43,7 +44,7 @@ async function getAboutGithub() {
                             GitHub
                         </a>
 
-                        <a href="./Currículo Novo - Maryane Praxedes.pdf" target="_blank" class="botao-outline">
+                        <a href="./Curriculo_AndreLuisSilvaRochaNunes.pdf" target="_blank" class="botao-outline">
                             Currículo
                         </a>
                     </div>
@@ -70,10 +71,13 @@ async function getAboutGithub() {
     }
 }
 
+// Chame a função para executar a montagem do HTML
+getAboutGithub();
+
 // Função para construção do Carrossel com o Swiper
 async function getProjectsGitHub() {
     try {
-        const resposta = await fetch('https://api.github.com/users/marypraxedes/repos?sort=update&per_page=6');
+        const resposta = await fetch('https://api.github.com/users/andrelsrn/repos?sort=update&per_page=6');
         const repositorios = await resposta.json();
 
         swiperWrapper.innerHTML = '';

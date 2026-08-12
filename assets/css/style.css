@@ -10,18 +10,18 @@
 
 /* Variáveis */
 :root {
-    /* Paleta de Cores - Red */
-    --red-50: #ffeaea;
-    --red-100: #fadcdc;
-    --red-200: #f0b3b3;
-    --red-300: #e58686;
-    --red-400: #db6060;
-    --red-500: #c83636;
-    --red-600: #a02c2c;
-    --red-700: #772121;
-    --red-800: #881f1f;
-    --red-900: #4d0e0e;
-    --red-950: #300707;
+/* Paleta de Cores - Purple */
+    --red-50: #f3e8ff;
+    --red-100: #e9d5ff;
+    --red-200: #d8b4fe;
+    --red-300: #c084fc;
+    --red-400: #a855f7;
+    --red-500: #9333ea; /* Roxo Principal */
+    --red-600: #7e22ce;
+    --red-700: #6b21a8;
+    --red-800: #581c87;
+    --red-900: #3b0764;
+    --red-950: #240046;
 
     /* Cores Neutras */
     --gray-200: #e8e8e8;
@@ -32,10 +32,10 @@
     /* Cores de Estado */
     --error: #e63946;
 
-    /* Sombras */
+    /* Sombras ajustadas para o tom roxo (RGBA da cor 147, 51, 234) */
     --shadow-sm: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 0.25rem 0.75rem rgba(200, 54, 54, 0.3);
-    --shadow-lg: 0 0.5rem 1.5rem rgba(200, 54, 54, 0.2);
+    --shadow-md: 0 0.25rem 0.75rem rgba(147, 51, 234, 0.3);
+    --shadow-lg: 0 0.5rem 1.5rem rgba(147, 51, 234, 0.2);
 
     /* Espaçamentos */
     --spacing-xs: 0.5rem;
